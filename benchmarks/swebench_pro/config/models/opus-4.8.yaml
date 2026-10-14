@@ -1,0 +1,20 @@
+# iCode model profile used inside the instance container. run.py fills in
+# base_url (the host-side gateway) and api_key (a per-run gateway token); the
+# real Anthropic key stays in the runner's environment on the host.
+#
+# Settings as Claude Code 2.1.273 and 2.1.284 send them for `--effort high
+# --model claude-opus-4-8` (swebench-pro-cli-runner's opus_4_8_plain arm),
+# captured 2026-10-13: max_tokens 64000, adaptive thinking, output_config
+# effort "high", context management keeping every thinking block, and the
+# interleaved-thinking, context-management and effort betas. Claude Code reports
+# a 200k context window for this model (not the 1M `[1m]` variant).
+# The Haiku 4.5 profile (haiku-4.5.yaml) is separate and unchanged; pick one
+# with `run.py --model`.
+id: 7c1f4e2a9b8d4c6e8f0a1b2c3d4e5f60
+name: opus-4.8
+provider: anthropic
+model_id: claude-opus-4-8
+max_context_tokens: 200000
+max_output_tokens: 64000
+http_read_timeout: 600.0
+chat_options: '{"thinking": {"type": "adaptive"}, "output_config": {"effort": "high"}, "additional_beta_flags": ["interleaved-thinking-2025-05-14", "context-management-2025-06-27", "effort-2025-11-24"], "extra_body": {"cache_control": {"type": "ephemeral"}, "context_management": {"edits": [{"type": "clear_thinking_20251015", "keep": "all"}]}}}'

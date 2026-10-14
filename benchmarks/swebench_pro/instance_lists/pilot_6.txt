@@ -1,0 +1,11 @@
+# Pilot: 6 instances from the first 100 of pro_main_200.txt (g_baseline_100), so
+# their results carry over when the same --run-id later runs the 100 or the 200.
+# 2 Python, 2 Go, 2 JS/TS; 2 Alpine (musl) images (teleport, webclients); 3 that
+# Claude Code + Haiku 4.5 resolved in haiku_plain.json (teleport, flipt, NodeBB)
+# and 3 it did not (webclients, ansible, qutebrowser).
+instance_gravitational__teleport-37c3724d0d6637e959e39408ee351565d73afe71-vee9b09fb20c43af7e520f57e9239bbcf46b7113d
+instance_protonmail__webclients-08bb09914d0d37b0cd6376d4cab5b77728a43e7b
+instance_ansible__ansible-83909bfa22573777e3db5688773bda59721962ad-vba6da65a0f3baefda7a058ebbd0a8dcafb8512f5
+instance_qutebrowser__qutebrowser-35168ade46184d7e5b91dfa04ca42fe2abd82717-v363c8a7e5ccdf6968fc7ab84a2053ac78036691d
+instance_flipt-io__flipt-0b119520afca1cf25c470ff4288c464d4510b944
+instance_NodeBB__NodeBB-1ea9481af6125ffd6da0592ed439aa62af0bca11-vd59a5728dfc977f44533186ace531248c2917516

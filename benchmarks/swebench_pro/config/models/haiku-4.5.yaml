@@ -1,0 +1,14 @@
+# iCode model profile used inside the instance container. run.py fills in
+# base_url (the host-side gateway) and api_key (a per-run gateway token); the
+# real Anthropic key stays in the runner's environment on the host.
+id: b818a98e38564d9cac486ad52997c0c4
+name: haiku-4.5
+provider: anthropic
+model_id: claude-haiku-4-5-20251001
+max_context_tokens: 200000
+max_output_tokens: 32000
+http_read_timeout: 600.0
+# Thinking as Claude Code 2.1.273 and 2.1.284 send it for `--effort high --model
+# claude-haiku-4-5-20251001` (captured 2026-10-10): max_tokens 32000, budget 31999,
+# the interleaved-thinking beta, and context management keeping every thinking block.
+chat_options: '{"thinking": {"type": "enabled", "budget_tokens": 31999}, "additional_beta_flags": ["interleaved-thinking-2025-05-14", "context-management-2025-06-27"], "extra_body": {"cache_control": {"type": "ephemeral"}, "context_management": {"edits": [{"type": "clear_thinking_20251015", "keep": "all"}]}}}'

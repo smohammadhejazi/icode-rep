@@ -54,3 +54,6 @@ src/chrys/foundation/vendor/ripgrep/rg*
 .windsurf
 .aider*
 .copilot
+
+# Exported run archives (benchmarks/swebench_pro)
+/data/

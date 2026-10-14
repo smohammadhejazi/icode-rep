@@ -1,0 +1,17 @@
+[project]
+name = "icode-swebench-pro"
+version = "0.1.0"
+description = "Run iCode on SWE-bench Pro instances and score them with the official harness"
+requires-python = ">=3.12"
+dependencies = [
+    "aiohttp",    # gateway.py: the host-side proxy that holds the API key
+    "datasets",   # the SWE-bench Pro dataset rows
+    "pyyaml",     # iCode model profiles
+    # SWE-bench_Pro-os swe_bench_pro_eval.py (local Docker mode)
+    "docker",
+    "pandas",
+    "tqdm",
+]
+
+[tool.uv]
+package = false

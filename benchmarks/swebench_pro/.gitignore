@@ -1,0 +1,12 @@
+# Built by setup.sh
+/runtime/
+/runtime-musl/
+/external/
+# Run outputs
+/runs/
+# API key and local environment (also covered by the repository's root .gitignore; repeated here so the
+# directory stays safe on its own)
+.env
+.env.*
+/.venv/
+__pycache__/
